@@ -7,7 +7,7 @@
 #include <random>
 
 #include "routingkit/utils/expect.h"
-#include "verify.h"
+#include "routingkit/base/verify.h"
 
 using namespace RoutingKit;
 using namespace std;

@@ -4,7 +4,7 @@
 #include "routingkit/base/min_max.h"
 #include "routingkit/base/inverse_vector.h"
 
-#include "verify.h"
+#include "routingkit/base/verify.h"
 
 #include <iostream>
 #include <stdexcept>

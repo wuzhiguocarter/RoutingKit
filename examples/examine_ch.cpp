@@ -5,7 +5,7 @@
 #include "routingkit/base/inverse_vector.h"
 #include "routingkit/core/contraction_hierarchy.h"
 
-#include "verify.h"
+#include "routingkit/base/verify.h"
 
 #include <iostream>
 #include <fstream>

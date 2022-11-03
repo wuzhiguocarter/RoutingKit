@@ -3,7 +3,7 @@
 #include "routingkit/base/min_max.h"
 #include "routingkit/base/geo_dist.h"
 
-#include "verify.h"
+#include "routingkit/base/verify.h"
 
 #include <iostream>
 #include <stdexcept>
