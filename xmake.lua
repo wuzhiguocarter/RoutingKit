@@ -21,6 +21,7 @@ target("routingkit")
     set_kind("static")
     add_files("src/routingkit/**.cpp")
     set_targetdir("lib")
+    add_installfiles("src/(routingkit/**.h)", {prefixdir = "include"})
 
 -- common deps
 add_packages("zlib")
