@@ -3,7 +3,7 @@
 Geographical positions can be converted routing node IDs by searching for the node that is the closest. These queries are called nearest neighbor searches. A basic implementation consists of computing the distances to every node but this is too slow in practice. An index-based approach is necessary. RoutingKit therefore provides a Vantage-Point Tree implementation. It can be used as following:
 
 ```cpp
-#include <routingkit/geo_position_to_node.h>
+#include "routingkit/core/geo_position_to_node.h"
 
 ...
 std::vector<float>latitude_of_node = ...;

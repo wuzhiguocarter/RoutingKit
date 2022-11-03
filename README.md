@@ -12,11 +12,11 @@ A key element is an interface that is a good compromise between usability and ru
 For example the following code snippet is enough to build and query a basic index given an [OSM](https://www.openstreetmap.org) PBF data export.
 
 ```cpp
-#include <routingkit/osm_simple.h>
-#include <routingkit/contraction_hierarchy.h>
-#include <routingkit/inverse_vector.h>
-#include <routingkit/timer.h>
-#include <routingkit/geo_position_to_node.h>
+#include "routingkit/utils/osm/osm_simple.h"
+#include "routingkit/core/contraction_hierarchy.h"
+#include "routingkit/base/inverse_vector.h"
+#include "routingkit/utils/timer.h"
+#include "routingkit/core/geo_position_to_node.h"
 #include <iostream>
 using namespace RoutingKit;
 using namespace std;
