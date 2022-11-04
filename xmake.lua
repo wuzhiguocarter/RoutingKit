@@ -1,9 +1,10 @@
 set_languages("c++11")
 add_rules("mode.debug", "mode.release") 
-
-add_requires("zlib")
+add_requires("openmp", "zlib")
 
 add_includedirs("src")
+-- common deps
+add_packages("openmp", "zlib")
 
 target("routingkit_base")
     set_kind("static")
@@ -22,9 +23,6 @@ target("routingkit")
     add_files("src/routingkit/**.cpp")
     set_targetdir("lib")
     add_installfiles("src/(routingkit/**.h)", {prefixdir = "include"})
-
--- common deps
-add_packages("zlib")
 
 -- $ for target in `ls test/|xargs -n1 basename|sed 's/\.cpp//g'`;do echo target\(\"$target\"\);echo "    "set_kind\(\"binary\"\); echo "    "add_files\(\"test/${target}.cpp\"\); echo "    "add_deps\(\"routingkit\"\); echo "    "set_targetdir\(\"bin/test\"\); done;
 target("test_basic_features")
@@ -71,6 +69,7 @@ target("test_customizable_contraction_hierarchy_path_query")
     set_kind("binary")
     add_files("test/test_customizable_contraction_hierarchy_path_query.cpp")
     add_deps("routingkit")
+    add_packages("zlib", "openmp")
     set_targetdir("bin/test")
 target("test_customizable_contraction_hierarchy_perfect_customization")
     set_kind("binary")
