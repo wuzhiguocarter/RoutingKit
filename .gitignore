@@ -4,3 +4,4 @@ lib/
 compile_commands.json
 .xmake/
 output
+data/

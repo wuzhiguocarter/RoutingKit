@@ -1,6 +1,7 @@
 set_languages("c++11")
 add_rules("mode.debug", "mode.release") 
 add_requires("openmp", "zlib")
+add_ldflags("-pthread")
 
 add_includedirs("src")
 -- common deps
@@ -25,6 +26,11 @@ target("routingkit")
     add_installfiles("src/(routingkit/**.h)", {prefixdir = "include"})
 
 -- $ for target in `ls test/|xargs -n1 basename|sed 's/\.cpp//g'`;do echo target\(\"$target\"\);echo "    "set_kind\(\"binary\"\); echo "    "add_files\(\"test/${target}.cpp\"\); echo "    "add_deps\(\"routingkit\"\); echo "    "set_targetdir\(\"bin/test\"\); done;
+target("main")
+    set_kind("binary")
+    add_files("examples/main.cpp")
+    add_deps("routingkit")
+    set_targetdir("bin/examples")
 target("test_basic_features")
     set_kind("binary")
     add_files("test/test_basic_features.cpp")
