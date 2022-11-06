@@ -30,7 +30,9 @@ int main(){
 
 	// Use the query object to answer queries from stdin to stdout
 	float from_latitude, from_longitude, to_latitude, to_longitude;
-	while(cin >> from_latitude >> from_longitude >> to_latitude >> to_longitude){
+	cout << "Plear input from_latitude,from_longitude, to_latitude, to_longitude"  << endl;
+	while (cin >> from_latitude >> from_longitude >> to_latitude >> to_longitude)
+	{
 		unsigned from = map_geo_position.find_nearest_neighbor_within_radius(from_latitude, from_longitude, 1000).id;
 		if(from == invalid_id){
 			cout << "No node within 1000m from source position" << endl;
