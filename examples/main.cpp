@@ -16,7 +16,10 @@ int main(){
 	auto ch = ContractionHierarchy::build(
 		graph.node_count(), 
 		tail, graph.head, 
-		graph.travel_time
+		graph.travel_time,
+		[](std::string msg){
+			cerr << msg << endl;
+		}
 	);
 
 	// Build the index to quickly map latitudes and longitudes
