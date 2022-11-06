@@ -57,6 +57,13 @@
         "numeric": "cpp",
         "random": "cpp",
         "iomanip": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "filesystem": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "__tree": "cpp",
+        "list": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }
