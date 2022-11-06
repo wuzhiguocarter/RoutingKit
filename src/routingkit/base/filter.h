@@ -16,7 +16,9 @@ void inplace_keep_element_of_vector_if(const BitVector&keep_filter, std::vector<
 	uint64_t in = 0, out = 0, s = vec.size();
 	while(in != s){
 		if(keep_filter.is_set(in)){
-			vec[out] = std::move(vec[in]);
+			if (in != out) {
+				vec[out] = std::move(vec[in]);
+			}
 			++out;
 		}
 		++in;
